@@ -39,9 +39,6 @@
 			<url>https://github.com/isa-group/ideas-base-module</url>
 		</repository>
 
-                        <id>aml</id>
-                        <url>https://github.com/isa-group/aml</url>
-                </repository> 
 	</repositories>
 
 	<dependencies>
