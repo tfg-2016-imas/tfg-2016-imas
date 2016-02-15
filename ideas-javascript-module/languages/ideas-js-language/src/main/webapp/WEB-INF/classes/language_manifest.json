@@ -1,0 +1,29 @@
+{
+    "id": "ideas-javascript-language",
+    "extension": "js",
+    "name": "Javascript",
+    "formats": [
+        {
+            "format": "js",
+            "editorModeId": "ace/mode/javascript",
+            "_editorModeURI": "mode-js.js",
+            "editorThemeId": "ace/theme/chrome",
+            "_editorThemeURI": "theme-chrome.js",
+            "checkLanguage": "false"
+        }
+    ],
+    "operations": [
+        {
+            "id": "test",
+            "name": "Test this document",
+            "data": {},
+            "_remoteExecution": "true",
+            "action": "function(operation, fileUri, result) {console.log(result);}"
+        }
+
+    ],
+    "templateProjects": null,
+    "templateFiles": null,
+    "inspectorLoader": "function(loader, format) {}",
+    "helpURI": "/views/help/index.jsp"
+}

@@ -1,0 +1,30 @@
+Download eclipse 
+http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/1/eclipse-jee-mars-1-win32-x86_64.zip
+
+Download JDK 7
+http://www.oracle.com/technetwork/es/java/javase/downloads/jdk7-downloads-1880260.html
+
+Download XAMPP
+
+
+Download Sourcetree
+https://www.sourcetreeapp.com/
+
+Maven Eclipse Inegration
+http://download.eclipse.org/technology/m2e/releases/
+
+Eclipse: change jdk 7 instead jre. Eclipse-> Preferences -> Java -> Installed Jres -> Add and search the folder where you installed JDK 7.
+
+Tomcat: a la hora de crear el certificado buscar la carpeta Java -> jdk... -> bin y ejecutar el comando keytool -keygen -alias tomcat -keyalg RSA , a continuación, 
+introducir la clave changeit y no cambiar nada mas. Usar la misma clave para el certificado y el almacen.
+https://tomcat.apache.org/tomcat-7.0-doc/ssl-howto.html
+Archivo que hay que descomentar y cambiar el puerto esta en --> C:\xampp\tomcat\conf (no olvidar cambiar tambien redirectPort de la conexion sin SSL )
+<Connector port="8181" protocol="org.apache.coyote.http11.Http11Protocol"
+               maxThreads="150" SSLEnabled="true" scheme="https" secure="true"
+			   keystoreFile="${user.home}/.keystore" keystorePass="changeit"
+               clientAuth="false" sslProtocol="TLS" />
+
+Base de Datos: descargar db de ideas pichando con boton derecho y haciendo clic en guardar enlace como..
+
+Crear servidor Tomcat en Eclipse: en Window -> Show Views -> Servers crear un servidor tomcat version 7 y añadir ideas-studio. Para iniciar el servidor hay que tener parado el 
+servidor tomcat de xampp.  Seguidamente haremos ru configurations y añadimos -Xms512m -Xmx1024m -XX: MaxPermSize = 256m en "VM arguments".

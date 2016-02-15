@@ -1,0 +1,26 @@
+[
+    {
+        "id": "test",
+        "description": "Test this document",
+        "opUri": "/language/operation/test/execute",
+        "opMethod": "POST",
+        "parameters":
+                {
+                    "id": "test",
+                    "content": "",
+                    "fileUri": "/tests/resource/sample/doc1"
+                },
+        "results": [
+            {
+                "status": "OK",
+                "message": null,
+                "htmlMessage": "<pre><b>This is a valid document.</b></pre>",
+                "data": null,
+                "context": null,
+                "fileUri": "/tests/resource/sample/doc1",
+                "annotations": null,
+                "customStruct": null
+            }
+        ]
+    }
+]
