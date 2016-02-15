@@ -8,7 +8,7 @@
     <name>ideas-javascript-module</name>
 
     <modules>
-        <module>languages/ideas-js-language</module>
+        <module>languages/ideas-javascript-language</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
