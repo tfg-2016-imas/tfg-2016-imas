@@ -15,7 +15,6 @@
 	<!-- Properties -->
 	<properties>
 		<ideas-base-module.version>0.7</ideas-base-module.version>
-		<aml.version>1.0-SNAPSHOT</aml.version>
 		<java.version>1.7</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -40,6 +39,9 @@
 			<url>https://github.com/isa-group/ideas-base-module</url>
 		</repository>
 
+                        <id>aml</id>
+                        <url>https://github.com/isa-group/aml</url>
+                </repository> 
 	</repositories>
 
 	<dependencies>
