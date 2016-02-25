@@ -1,0 +1,20 @@
+<!-- This is a maven configuration file for ideas-studio configuration -->
+
+<settings>
+    <profiles>
+        <profile>
+            <id>ideas-default-settings</id>
+            <properties>
+                <settings.repo_base_uri>./ideas-repo/</settings.repo_base_uri>
+                <!-- Update the following properties with your database configuration -->
+                <settings.mysqlDB>ideas</settings.mysqlDB>
+                <settings.mysqlUser>user</settings.mysqlUser>
+                <settings.mysqlPass>password</settings.mysqlPass>
+                <!-- End of database configuration -->
+            </properties>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>ideas-default-settings</activeProfile>
+    </activeProfiles>
+</settings>
