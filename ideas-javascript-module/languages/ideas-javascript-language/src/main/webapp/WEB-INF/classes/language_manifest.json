@@ -6,7 +6,7 @@
         {
             "format": "js",
             "editorModeId": "ace/mode/javascript",
-            "_editorModeURI": "mode-js.js",
+            "_editorModeURI": "mode-javascript.js",
             "editorThemeId": "ace/theme/chrome",
             "_editorThemeURI": "theme-chrome.js",
             "checkLanguage": "false"
