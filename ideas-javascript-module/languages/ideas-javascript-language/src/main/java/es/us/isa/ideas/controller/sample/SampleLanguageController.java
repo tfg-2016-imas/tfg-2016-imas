@@ -6,6 +6,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import es.us.isa.ideas.module.controller.BaseLanguageController;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -22,14 +27,17 @@ public class SampleLanguageController extends BaseLanguageController {
         appResponse.setFileUri(fileUri);
 
         if (id.equals("test")) {
-            String key = "hello world";
-            if (content.toLowerCase().contains(key)) {
-                appResponse.setHtmlMessage("<pre><b>This is a valid document.</b></pre>");
-                appResponse.setStatus(Status.OK);
-            } else {
-                appResponse.setHtmlMessage("<pre><b>This is an invalid document.</b><br>Please, add the string \"" + key + "\" to validate your document.</pre>");
-                appResponse.setStatus(Status.OK_PROBLEMS);
+            ScriptEngineManager manager = new ScriptEngineManager();
+            ScriptEngine engine = manager.getEngineByName("js");
+            
+            Object result = null;
+            try {
+                result = engine.eval(content);
+            } catch (ScriptException ex) {
+                Logger.getLogger(SampleLanguageController.class.getName()).log(Level.SEVERE, null, ex);
             }
+            appResponse.setHtmlMessage(result.toString());
+            appResponse.setStatus(Status.OK);
         }
 
         return appResponse;
